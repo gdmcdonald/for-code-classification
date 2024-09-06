@@ -1,3 +1,5 @@
+import pandas as pd
+
 
 def build_hierarchy_with_ids(df):
     """
