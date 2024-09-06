@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "for-code-classification"
+version = "0.1.0"
+description = "Add Field of Research Codes to journal publications"
+authors = ["Gordon McDonald <gordon27@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "utils.py", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pandas = "^2.2.2"
+transformers = "^4.44.2"
+ipykernel = "^6.29.5"
+# torch = "^2.4.0"
+# Add torch dependencies
+torch = {version = "*", source = "pytorch-nightly"}
+torchvision = {version = "*", source = "pytorch-nightly"}
+torchaudio = {version = "*", source = "pytorch-nightly"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "pytorch-nightly"
+url = "https://download.pytorch.org/whl/nightly/cpu"
+default = false
